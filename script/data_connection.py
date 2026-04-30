@@ -16,3 +16,16 @@ df = spark.read.jdbc(
 )
 
 df.display()
+
+# Create schema/database first
+spark.sql("CREATE SCHEMA IF NOT EXISTS healthcare")
+
+
+# Save as Delta table in Databricks
+df.write.format("delta") \
+    .mode("overwrite") \
+    .saveAsTable("default.healthcare_gold_fact_monthly_kpis")
+
+# Check if the table was saved
+%sql
+SHOW TABLES IN healthcare
