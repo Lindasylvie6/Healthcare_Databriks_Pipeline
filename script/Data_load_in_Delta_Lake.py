@@ -6,7 +6,7 @@ jdbc_url = "jdbc:sqlserver://sql-healthcare-dwh-db.database.windows.net:1433;dat
 
 connection_properties = {
     "user": "CloudSA78da23a3",
-    "password": "Alpha1&omega",
+    "password": "******",
     "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
     "encrypt": "true",
     "trustServerCertificate": "true"
